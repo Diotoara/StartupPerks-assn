@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { login, register } from "../controllers/authController.js";
+const router = Router();
+router.post("/register", register);
+router.post("/login", login);
+router.get("/health", (req, res) => {
+    res.json({
+        message: "user auth enpoint is healhty."
+    });
+});
+export default router;
+//# sourceMappingURL=authRoutes.js.map
